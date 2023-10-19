@@ -3,10 +3,10 @@ import Modal from 'react-modal'
 
 Modal.setAppElement('#root')
 
-const CartPopup = () => {
+const CartPopup = props => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState('card')
-
+  const {noOfItems, total} = props
   const handleCheckout = () => {
     setIsModalOpen(true)
   }
@@ -52,7 +52,9 @@ const CartPopup = () => {
             </option>
             <option value="cod">Cash on Delivery</option>
           </select>
-          <p>Items in Cart: | Total Price:</p>
+          <p>
+            Items in Cart: {noOfItems} | Total Price:{total}
+          </p>
           <button
             type="button"
             onClick={handleConfirmOrder}

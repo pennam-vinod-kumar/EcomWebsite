@@ -1,6 +1,6 @@
 import CartContext from '../../context/CartContext'
-// import CartPopup from '../CartPopup'
 import './index.css'
+import CartPopup from '../CartPopup'
 
 const CartSummary = () => (
   <CartContext.Consumer>
@@ -19,6 +19,7 @@ const CartSummary = () => (
               /-
             </h1>
             <p className="total-items">{cartList.length} Items in cart</p>
+            <CartPopup noOfItems={cartList.length} total={total} />
           </div>
         </>
       )
