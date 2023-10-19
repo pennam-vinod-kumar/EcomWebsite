@@ -4,8 +4,8 @@ import Header from '../Header'
 import EmptyCartView from '../EmptyCartView'
 import CartListView from '../CartListView'
 import CartSummary from '../CartSummary'
-
 import './index.css'
+import CartPopup from '../CartPopup'
 
 const Cart = () => (
   <CartContext.Consumer>
@@ -34,6 +34,7 @@ const Cart = () => (
                 </button>
                 <CartListView />
                 <CartSummary />
+                <CartPopup />
               </div>
             )}
           </div>

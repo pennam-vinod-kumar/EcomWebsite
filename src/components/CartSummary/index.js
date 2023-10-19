@@ -1,5 +1,5 @@
 import CartContext from '../../context/CartContext'
-
+// import CartPopup from '../CartPopup'
 import './index.css'
 
 const CartSummary = () => (
@@ -19,13 +19,7 @@ const CartSummary = () => (
               /-
             </h1>
             <p className="total-items">{cartList.length} Items in cart</p>
-            <button type="button" className="checkout-button d-sm-none">
-              Checkout
-            </button>
           </div>
-          <button type="button" className="checkout-button d-lg-none">
-            Checkout
-          </button>
         </>
       )
     }}
